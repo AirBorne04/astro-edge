@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { App } from '../app/App';
+
+export function getStaticPaths() {
+  return [
+    { params: { path: 'app' } },
+    { params: { path: 'app/users' } },
+    { params: { path: 'app/users/1' } },
+  ];
+}
+---
+
+<Layout title="Astro Edge.">
+	<main>
+		<App path={Astro.url.pathname} client:load />
+	</main>
+</Layout>

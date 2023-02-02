@@ -1,6 +1,9 @@
 import { defineConfig } from 'astro/config';
+import base from './astro.config-base.mjs';
+
 
 // https://astro.build/config
 export default defineConfig({
-  output: "static"
+  ...base,
+  output: "static",
 });
