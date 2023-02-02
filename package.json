@@ -1,0 +1,22 @@
+{
+  "name": "astro-edge",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "preview:vc": "astro preview --config astro.config-vc.mjs",
+    "preview:cf": "wrangler pages dev ./dist --compatibility-flags=streams_enable_constructors --live-reload",
+    "build:cf": "astro build --config astro.config-cf.mjs",
+    "build:vc": "astro build --config astro.config-vc.mjs"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^6.1.1",
+    "@astrojs/vercel": "^3.0.0",
+    "astro": "^2.0.5"
+  }
+}
